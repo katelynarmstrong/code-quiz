@@ -7,13 +7,20 @@
     <title>Code Quiz</title>
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
+
 <body>
+    <!-- start button and quiz instruction-->
     <header>
         <h1 class="page-title">Code Quiz: JavaScript</h1>
         <p class="instructions">Click the "START!" button to test your JavaScript knowledge!</p>
         <button class="start-btn" id="start-btn">START!</button>
     </header>
+
+    <!--timer and questions for active quiz-->
     <main class="page-content">
+        <div class="timer" id="timer">
+            <!--Timer-->
+        </div>
         <div id="questions">
             <h2 id="question-text"></h2>
             <div id="answer-choices">
@@ -24,8 +31,20 @@
             </div>
             <h2 id="score"></h2>
         </div>
+
+    <!-- scoreboard log -->
+        <div id="high-scores">
+            <form class="initial-form" id="initial-form">
+                <label for="initials">Please enter your initials: </label>
+                <input type="text" name="initials" id="initials" placeholder="Your Initials Here">
+                <button class="submit-btn" id="initials-btn">submit-btn</button>
+            </form>
+            <h2 class="learderboard-title" id="leaderboard-title">High Scores</h2>
+                <li id="leaderboard-list"></li>
+        </div>
     </main>
+
+    <!-- javascript attach -->
     <script src="./assets/js/script.js"></script>
 </body>
-
 </html>
