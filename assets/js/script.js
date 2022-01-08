@@ -34,13 +34,13 @@ var time_remaining = 60;
 currentQuestion = 0;
 
 // Reference variables to html 
-var questionContentEl = document.querySelector("#question-content");
+var questionsEl = document.querySelector("#questions");
 var startBtn = document.querySelector("#start-btn")
 let timerDisplay = document.querySelector("#timer")
 
 // function to hide quiz before user hits begin
-function hideQuestoins(){
-    questionContentEl.setAttribute("hidden", true)
+function hideQuestions(){
+    questionsEl.setAttribute("hidden", true)
 }
 
 // start quiz when user hits begin button 
@@ -49,8 +49,8 @@ startBtn.addEventListener("click", startQuiz);
 // function to start timer/quiz
 function startQuiz() {
     // disable hidden questions function
-    hideQuestoins();
-    questionContentEl.removeAttribute("hidden");
+    hideQuestions();
+    questionsEl.removeAttribute("hidden");
 
     // initalize current question
     displayQuestion();
@@ -73,14 +73,14 @@ function timerCountdown(){
 
 function displayQuestion(){
     let question = questions[currentQuestion];
-    let answerOptions = question.options;
+    let answerChoice = question.choices;
 
     let questionEl = document.querySelector("#question-text");
     questionEl.textContent = question.questionText;
 
-    for (var i = 0; i < answerOptions.length; i++){
-        let answerChoice = answerOptions[i];
-        let answerBtn = document.querySelector("#option"+i);
+    for (var i = 0; i < answer-choices.length; i++){
+        let answerChoice = answerChoices[i];
+        let answerBtn = document.querySelector("#choice"+i);
         answerBtn.textContent = answerChoice;
     }   
 }
@@ -133,7 +133,7 @@ function endQuiz(){
     finalScore.textContent = "You scored " + score + " points!";
     document.querySelector("#time-remaining").setAttribute("hidden", true);
     document.querySelector("#question-text").setAttribute("hidden", true);
-    document.querySelector("#answer-options").setAttribute("hidden", true);
+    document.querySelector("#answer-choices").setAttribute("hidden", true);
 }
 
 // when user hits submit button it adds their score and initials to the leaderboard
