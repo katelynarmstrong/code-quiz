@@ -8,7 +8,23 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-    
+    <header>
+        <h1 class="page-title">Code Quiz: JavaScript</h1>
+        <p class="instructions">Click the "START!" button to test your JavaScript knowledge!</p>
+        <button class="start-btn" id="start-btn">START!</button>
+    </header>
+    <main class="page-content">
+        <div id="questions">
+            <h2 id="question-text"></h2>
+            <div id="answer-choices">
+                <button id="choice0" class="choice-btn"></button>
+                <button id="choice1" class="choice-btn"></button>
+                <button id="choice2" class="choice-btn"></button>
+                <button id="choice3" class="choice-btn"></button>
+            </div>
+            <h2 id="score"></h2>
+        </div>
+    </main>
     <script src="./assets/js/script.js"></script>
 </body>
 
