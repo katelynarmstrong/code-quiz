@@ -43,16 +43,16 @@ function hideQuestions(){
     questionsEl.setAttribute("hidden", true)
 }
 
-// start quiz when user hits begin button 
+// start quiz when user hits start button 
 startBtn.addEventListener("click", startQuiz);
 
-// function to start timer/quiz
+// function to start quiz with timer
 function startQuiz() {
-    // disable hidden questions function
+    // disable hidden feature
     hideQuestions();
     questionsEl.removeAttribute("hidden");
 
-    // initalize current question
+    // initalize question
     displayQuestion();
 
     // start timer
