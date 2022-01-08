@@ -1,18 +1,39 @@
 * {
     font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
+    background-color: #FFFDD0;
 }
 .page-title {
     text-align: center;
     padding: 10px;
-    color: 264653;
+    color: #264653;
 }
 
 .page-content {
     text-align: center;
 }
 
+.instructions {
+    text-align: center;
+    color: #2a9d8f;
+}
+
+.start-btn{
+    color: #2a9d8f;
+    display: inline-block;
+    padding: 10px;
+    font-size: 2rem;
+    border-radius: 5px;
+    position: relative;
+    box-shadow: 0.25px 2px #264653;
+}
+
 .header {
     text-align: center;
     padding: 15px;
+}
+
+.start-btn:hover, .choice-btn:hover, .submit-btn:hover{
+    color: #2a9d8f;
+    text-shadow: none;
 }

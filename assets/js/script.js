@@ -12,7 +12,7 @@ var questions = [
     },
     {
         questionText: "How do you create a function in JavaScript?",
-        options:["a. function:myFunction()", "b. function=myFunction()", "c. function myFunction()"], "d. function:(myFunction)"],
+        options:["a. function:myFunction()", "b. function=myFunction()", "c. function myFunction()", "d. function:(myFunction)"],
         answer:"b. function=myFunction"
     },
     {
