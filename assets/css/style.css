@@ -33,13 +33,7 @@
     padding: 15px;
 }
 
-.initial-form {
-    text-align: center;
-    padding: 10px;
-    color: #264653;
-}
-
-.learderboard-title {
+.initial-form, h2 {
     text-align: center;
     padding: 10px;
     color: #264653;

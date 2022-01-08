@@ -87,7 +87,7 @@ function displayQuestion(){
 
 // when user clicks on answer, determine if its correct or incorrect
 
-document.querySelector("#answer-options").addEventListener("click",checkAnswer);
+document.querySelector("#answer-choices").addEventListener("click",checkAnswer);
 
 
 // determine if content for selected button and correct answer is the same 
@@ -125,7 +125,7 @@ function checkAnswer(event){
     }
 }
 
-document.querySelector("#answer-options").addEventListener("click", checkAnswer)
+document.querySelector("#answer-choices").addEventListener("click", checkAnswer)
 
 
 function endQuiz(){
