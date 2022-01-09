@@ -43,8 +43,9 @@ function hideQuestions(){
     questionsEl.setAttribute("hidden", true)
 }
 
-// start quiz when user hits start button 
+// start quiz and timer when user hits start button 
 startBtn.addEventListener("click", startQuiz);
+startBtn.addEventListener("click", timerCountdown);
 
 // function to start quiz with timer
 function startQuiz() {
@@ -62,7 +63,7 @@ function startQuiz() {
 // create a countdown function for the timer
 
 function timerCountdown(){
-    time_remaining--;
+    "time_remaining--;"
     if (time_remaining < 0) {
         endQuiz();
     }
@@ -162,7 +163,7 @@ function saveScore(event){
     updateLeaderboard(highScores);
 
     // hide questions because game is over 
-    hideQuestoins();
+    hideQuestions();
 
     // show the top scores
     displayLeaderboard();
