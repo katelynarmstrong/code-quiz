@@ -28,8 +28,6 @@ var questions = [
 ]
 
 // initialize variables 
-var score = 0;
-var quizOver = false;
 var time_remaining = 60;
 currentQuestion = 0;
 
@@ -38,17 +36,17 @@ var questionsEl = document.querySelector("#questions");
 var startBtn = document.querySelector("#start-btn")
 let timerDisplay = document.querySelector("#timer")
 
-// function to hide quiz before user hits begin
+// hide quiz before user hits begin
+
+// hide timer and question buttons
 
 // hide instructions and start button once quiz begins
 
-// start quiz and timer when user hits start button 
-
-// function to start quiz with timer
+// start quiz with timer upon button click
 
 // disable hidden feature
 
-// create function to display quiz questions 
+// display quiz questions 
 
 // when user clicks on answer, determine if its correct or incorrect
 
