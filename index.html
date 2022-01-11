@@ -18,12 +18,12 @@
 
     <!--timer and questions for active quiz-->
     <main class="page-content">
-        <div class="timer" id="timer">
-            <h2 id="time-remaining">Time Remaining:
+        <div class="timer" id="timer" data-state="hidden">
+            <h2 id="timeLeft">Time Remaining:
                 <span class="timer" id="timer"></span>
             </h2>
         </div>
-        <div id="questions">
+        <div id="questions" data-state="hidden">
             <h2 id="question-text"></h2>
             <div id="answer-choices">
                 <button id="choice0" class="choice-btn"></button>

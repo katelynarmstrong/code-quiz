@@ -28,7 +28,6 @@ var questions = [
 ]
 
 // initialize variables 
-var time_remaining = 60;
 currentQuestion = 0;
 
 // Reference variables to html 
@@ -36,7 +35,9 @@ var questionsEl = document.querySelector("#questions");
 var startBtn = document.querySelector("#start-btn")
 let timerDisplay = document.querySelector("#timer")
 
-// hide quiz before user hits begin
+// Timer that counts down from 60
+function countdown() {
+    var timeLeft = 60;
 
 // hide timer and question buttons
 
@@ -50,13 +51,13 @@ let timerDisplay = document.querySelector("#timer")
 
 // when user clicks on answer, determine if its correct or incorrect
 
-// correct answer increases the score 
-
 // incorrect answer decreases the time remaining 
 
 // go on to next question 
 
 // if there are no more questions, end quiz
+
+// if timer runs out, end quiz
 
 // when user hits submit button it adds their score and initials to the leaderboard
 
