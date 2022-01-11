@@ -39,8 +39,6 @@ let timerDisplay = document.querySelector("#timer")
 function countdown() {
     var timeLeft = 60;
 
-// hide timer and question buttons
-
 // hide instructions and start button once quiz begins
 
 // start quiz with timer upon button click
