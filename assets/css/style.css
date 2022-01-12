@@ -3,6 +3,10 @@
     box-sizing: border-box;
     background-color: #FFFDD0;
 }
+
+.hidden {
+    display: none;
+}
 .page-title {
     text-align: center;
     padding: 10px;
@@ -29,12 +33,12 @@
     box-shadow: 0.25px 2px #264653;
 }
 
-.header {
+header {
     text-align: center;
     padding: 15px;
 }
 
-.initial-form, h2 {
+.initial-form, h2, .timer {
     text-align: center;
     padding: 10px;
     color: #264653;

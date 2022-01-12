@@ -28,48 +28,68 @@ var questions = [
 ]
 
 // initialize variables 
-currentQuestion = 0;
+var currentIndex = 0;
+var timer = 60;
+var score = 0;
 
 // Reference variables to html 
 var questionsEl = document.querySelector("#questions");
+var question= document.getElementById('question-text')
 var startBtn = document.querySelector("#start-btn")
-let timerDisplay = document.querySelector("#timer")
+var timerDisplay = document.getElementById("timer")
+var options = document.getElementById('answer-choices')
 
-// Timer that counts down from 60
-function countdown() {
-    var timeLeft = 60;
+startBtn.addEventListener('click', function() {
+    document.getElementById('button-container').setAttribute('class', 'hidden')
+    renderQuestions()
+    startTimer()
+})
 
-// hide instructions and start button once quiz begins
+function startTimer() {
+    timerDisplay.textContent = 'Time Remaining: ' + timer
+    var currentTime = setInterval(function() {
+        timer--
+        if(timer === 0 || currentIndex > questions.length - 1) {
+            clearInterval(currentTime)
+            endQuiz()
+        }
+        timerDisplay.textContent = 'Time Remaining: ' + timer
 
-// start quiz with timer upon button click
+    }, 1000)
+}
 
-// disable hidden feature
+function endQuiz() {
+    console.log('quiz is over');
+    // add your hidden class to your id of page content
 
-// display quiz questions 
+    // then create an element, create an input(takes the users name) and a button
 
-// when user clicks on answer, determine if its correct or incorrect
+    // add event listener to button to add the users info to local storage and then window.location.href to your highscore page
+}
 
-// incorrect answer decreases the time remaining 
+function renderQuestions() {
+    if (currentIndex > questions.length - 1) {
+        return
+    }
+    options.textContent = ''
+    document.getElementById('score').textContent = 'Current Score: ' + score
+    question.textContent = questions[currentIndex].questionText
 
-// go on to next question 
+    for(var i = 0; i < questions[currentIndex].choices.length; i++) {
+        var answerBtn = document.createElement('button')
+        answerBtn.textContent = questions[currentIndex].choices[i]
+        options.append(answerBtn)
 
-// if there are no more questions, end quiz
-
-// if timer runs out, end quiz
-
-// when user hits submit button it adds their score and initials to the leaderboard
-
-// create function to save score of user
-
-// Ensure high score saves to see later 
-    event.preventDefault();
-
-// add user to leaderboard for local storage
-
-// hide questions once end of quiz activated 
-
-// update leaderboard in local storage
-
-// get leaderboard from local storage to review standing
-
-// display high scores
+        answerBtn.addEventListener('click', function(event) {
+            if(event.target.textContent === questions[currentIndex].answer) {
+                console.log('correct');
+                score += 20
+            } else {
+                console.log('incorrect');
+                timer -= 10
+            }
+            currentIndex++
+            renderQuestions()
+        })
+    }
+}

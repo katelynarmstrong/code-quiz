@@ -12,40 +12,26 @@
     <!-- start button and quiz instruction-->
     <header>
         <h1 class="page-title">Code Quiz: JavaScript</h1>
-        <p class="instructions">Click the "START!" button to test your JavaScript knowledge!</p>
-        <button class="start-btn" id="start-btn">START!</button>
+        <a href="highscores.html">View Highscores</a>
+        <div id="button-container">
+            <p class="instructions">Click the "START!" button to test your JavaScript knowledge!</p>
+            <button class="start-btn" id="start-btn">START!</button>
+        </div>
     </header>
 
     <!--timer and questions -->
-    <main class="page-content">
-        <div class="timer" id="timer" data-state="hidden">
+    <main id='page-content' class="page-content">
+        <div class="timer" id="timer">
             <h2 id="timeLeft">Time Remaining:
-                <span class="timer" id="timer"></span>
+                <span class="timer" id="timer">60</span>
             </h2>
         </div>
-        <div id="questions" data-state="hidden">
+        <div id="questions">
             <h2 id="question-text"></h2>
-            <div id="answer-choices">
-                <button id="choice0" class="choice-btn"></button>
-                <button id="choice1" class="choice-btn"></button>
-                <button id="choice2" class="choice-btn"></button>
-                <button id="choice3" class="choice-btn"></button>
-            </div>
+            <div id="answer-choices"></div>
             <h2 id="score"></h2>
         </div>
-
-    <!-- scoreboard log -->
-        <div id="high-scores">
-            <form class="initial-form" id="initial-form">
-                <label for="initials">Please enter your initials: </label>
-                <input type="text" name="initials" id="initials" placeholder="Your Initials Here">
-                <button class="submit-btn" id="initials-btn">submit</button>
-            </form>
-            <h2 class="learderboard-title" id="leaderboard-title">High Scores</h2>
-                <li id="leaderboard-list"></li>
-        </div>
     </main>
-
     <!-- javascript attach -->
     <script src="./assets/js/script.js"></script>
 </body>
