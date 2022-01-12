@@ -13,6 +13,11 @@
     color: #264653;
 }
 
+a {
+    color: #2a9d8f;
+    text-decoration: none;
+}
+
 .page-content {
     text-align: center;
 }
@@ -54,4 +59,8 @@ header {
 .start-btn:hover, .choice-btn:hover, .submit-btn:hover{
     color: #264653;
     text-shadow: none;
+}
+
+p {
+    text-align: center;
 }

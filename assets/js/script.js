@@ -2,7 +2,7 @@
 var questions = [
     {
         questionText: "Inside which HTML element do we put the JavaScript?",
-        choices:["a. <scripting", "b. <javascript>", "c. <js>", "d. <script>"],
+        choices:["a. <scripting>", "b. <javascript>", "c. <js>", "d. <script>"],
         answer:"d. <script>"
     },
     {
@@ -13,7 +13,7 @@ var questions = [
     {
         questionText: "How do you create a function in JavaScript?",
         choices:["a. function:myFunction()", "b. function=myFunction()", "c. function myFunction()", "d. function:(myFunction)"],
-        answer:"b. function=myFunction"
+        answer:"b. function=myFunction()"
     },
     {
         questionText: "How can you add a comment in a JavaScript?",
@@ -62,6 +62,8 @@ function endQuiz() {
     console.log('quiz is over');
     // add your hidden class to your id of page content
 
+    //calculate final score to record
+
     // then create an element, create an input(takes the users name) and a button
 
     // add event listener to button to add the users info to local storage and then window.location.href to your highscore page
@@ -93,3 +95,6 @@ function renderQuestions() {
         })
     }
 }
+
+
+
