@@ -29,7 +29,7 @@ var questions = [
 
 // initialize variables 
 var currentIndex = 0;
-var timer = 60;
+var timer = 1;
 var score = 0;
 
 // Reference variables to html 
@@ -38,6 +38,8 @@ var question= document.getElementById('question-text')
 var startBtn = document.querySelector("#start-btn")
 var timerDisplay = document.getElementById("timer")
 var options = document.getElementById('answer-choices')
+var scoreDisplay = document.getElementById('score')
+
 
 startBtn.addEventListener('click', function() {
     document.getElementById('button-container').setAttribute('class', 'hidden')
@@ -60,13 +62,20 @@ function startTimer() {
 
 function endQuiz() {
     console.log('quiz is over');
-    // add your hidden class to your id of page content
+    document.getElementById('page-content').setAttribute('class', 'hidden')
 
-    //calculate final score to record
+    scoreDisplay.textContent = "Final Score:" + score
 
     // then create an element, create an input(takes the users name) and a button
+    //not showing up!!!
+    var scoreBtn = document.createElement('button')
+    scoreBtn.textContent = "Save Score!"
+    options.append(scoreBtn)
 
     // add event listener to button to add the users info to local storage and then window.location.href to your highscore page
+    scoreBtn.addEventListener('click', function()) {
+        
+    }
 }
 
 function renderQuestions() {
