@@ -56,6 +56,13 @@ header {
     box-shadow: 0.25px .5px #264653;
 }
 
+.answer-btn {
+    color: #2a9d8f;
+    display: inline-block;
+    position: relative;
+    box-shadow: 0.25px .5px #264653;
+}
+
 .start-btn:hover, .choice-btn:hover, .submit-btn:hover{
     color: #264653;
     text-shadow: none;
@@ -63,4 +70,8 @@ header {
 
 p {
     text-align: center;
+}
+.scores {
+    text-align: center;
+ 
 }

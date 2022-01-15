@@ -39,6 +39,7 @@ var startBtn = document.querySelector("#start-btn")
 var timerDisplay = document.getElementById("timer")
 var options = document.getElementById('answer-choices')
 var scoreDisplay = document.getElementById('score')
+var scores = document.getElementById('scores')
 
 
 startBtn.addEventListener('click', function() {
@@ -62,20 +63,26 @@ function startTimer() {
 
 function endQuiz() {
     console.log('quiz is over');
+    
     document.getElementById('page-content').setAttribute('class', 'hidden')
 
     scoreDisplay.textContent = "Final Score:" + score
 
     // then create an element, create an input(takes the users name) and a button
-    //not showing up!!!
-    var scoreBtn = document.createElement('button')
-    scoreBtn.textContent = "Save Score!"
-    options.append(scoreBtn)
+    var initials = document.createElement ("input");
+    initials.setAttribute ("type", "text", placeholder= "Your Initials");
+    scores.append(initials)
 
+    var submitBtn = document.createElement('button')
+    submitBtn.textContent = "Save Score!"
+    scores.setAttribute('class', 'scores')
+    scores.append(submitBtn)
+    
     // add event listener to button to add the users info to local storage and then window.location.href to your highscore page
-    scoreBtn.addEventListener('click', function()) {
-        
-    }
+   submitBtn.addEventListener('click', function() {
+       localStorage.setItem("initals", JSON.stringify(initials));
+   })
+
 }
 
 function renderQuestions() {
