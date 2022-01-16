@@ -82,6 +82,7 @@ function endQuiz() {
    submitBtn.addEventListener('click', function() {
        localStorage.setItem("initals", JSON.stringify(initials));
    })
+ 
 
 }
 
