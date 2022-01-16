@@ -80,9 +80,8 @@ function endQuiz() {
     
     // add event listener to button to add the users info to local storage and then window.location.href to your highscore page
    submitBtn.addEventListener('click', function() {
-       localStorage.setItem("initals", JSON.stringify(initials));
+    localStorage.setItem("initals", JSON.stringify(initials.value));
    })
- 
 
 }
 
