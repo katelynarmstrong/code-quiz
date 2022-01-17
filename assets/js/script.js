@@ -29,7 +29,7 @@ var questions = [
 
 // initialize variables 
 var currentIndex = 0;
-var timer = 1;
+var timer = 60;
 var score = 0;
 
 // Reference variables to html 
@@ -42,7 +42,7 @@ var scoreDisplay = document.getElementById('score')
 var scores = document.getElementById('scores')
 
 
-
+//start the quiz
 startBtn.addEventListener('click', function() {
     document.getElementById('button-container').setAttribute('class', 'hidden')
     renderQuestions()
@@ -62,14 +62,13 @@ function startTimer() {
     }, 1000)
 }
 
-function endQuiz() {
-    console.log('quiz is over');
-    
+//end the quiz
+function endQuiz() {    
     document.getElementById('page-content').setAttribute('class', 'hidden')
 
     scoreDisplay.textContent = "Final Score:" + score
 
-    // then create an element, create an input(takes the users name) and a button
+    // end of quiz variables
     var initials = document.createElement ("input");
     initials.setAttribute ("type", "text", placeholder= "Your Initials");
     scores.append(initials)
@@ -83,17 +82,16 @@ function endQuiz() {
         finalScore: score,
         initials: initials
     };
-console.log(initials)
-    // add event listener to button to add the users info to local storage and then window.location.href to your highscore page
+    // Save Score actions to local storage
    submitBtn.addEventListener('click', function() {
        var initialsOnSubmit = initials.value
+       window.location.href = (".highscores.html");
     localStorage.setItem("score", score);
     localStorage.setItem("initials", initialsOnSubmit);
    })
-
-
 }
 
+// functions to cycle questions
 function renderQuestions() {
     if (currentIndex > questions.length - 1) {
         return
@@ -106,7 +104,7 @@ function renderQuestions() {
         var answerBtn = document.createElement('button')
         answerBtn.textContent = questions[currentIndex].choices[i]
         options.append(answerBtn)
-
+// answer effects
         answerBtn.addEventListener('click', function(event) {
             if(event.target.textContent === questions[currentIndex].answer) {
                 console.log('correct');
