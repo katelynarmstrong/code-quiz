@@ -83,10 +83,12 @@ function endQuiz() {
         finalScore: score,
         initials: initials
     };
-
+console.log(initials)
     // add event listener to button to add the users info to local storage and then window.location.href to your highscore page
    submitBtn.addEventListener('click', function() {
-    localStorage.setItem("scoreList", JSON.stringify(scoreList));
+       var initialsOnSubmit = initials.value
+    localStorage.setItem("score", score);
+    localStorage.setItem("initials", initialsOnSubmit);
    })
 
 
