@@ -71,7 +71,8 @@ header {
 p {
     text-align: center;
 }
-.scores {
+.scores, .initials {
     text-align: center;
- 
+    color: #2a9d8f;
+    flex: none; 
 }

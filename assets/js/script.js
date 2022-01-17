@@ -42,7 +42,7 @@ var scoreDisplay = document.getElementById('score')
 var scores = document.getElementById('scores')
 
 
-//start the quiz
+// start the quiz
 startBtn.addEventListener('click', function() {
     document.getElementById('button-container').setAttribute('class', 'hidden')
     renderQuestions()
@@ -62,7 +62,7 @@ function startTimer() {
     }, 1000)
 }
 
-//end the quiz
+// end the quiz
 function endQuiz() {    
     document.getElementById('page-content').setAttribute('class', 'hidden')
 
@@ -70,12 +70,12 @@ function endQuiz() {
 
     // end of quiz variables
     var initials = document.createElement ("input");
-    initials.setAttribute ("type", "text", placeholder= "Your Initials");
+    initials.setAttribute('placeholder', 'Your Initials');
     scores.append(initials)
 
     var submitBtn = document.createElement('button')
     submitBtn.textContent = "Save Score!"
-    scores.setAttribute('class', 'scores')
+    submitBtn.classList.add('submit-btn');
     scores.append(submitBtn)
     
     var scoreList = {
@@ -84,10 +84,12 @@ function endQuiz() {
     };
     // Save Score actions to local storage
    submitBtn.addEventListener('click', function() {
+       
        var initialsOnSubmit = initials.value
-       window.location.href = (".highscores.html");
+       window.location.href = ("./highscores.html");
     localStorage.setItem("score", score);
     localStorage.setItem("initials", initialsOnSubmit);
+    event.preventDefault();
    })
 }
 
@@ -102,15 +104,14 @@ function renderQuestions() {
 
     for(var i = 0; i < questions[currentIndex].choices.length; i++) {
         var answerBtn = document.createElement('button')
+        answerBtn.classList.add('answer-btn');
         answerBtn.textContent = questions[currentIndex].choices[i]
         options.append(answerBtn)
 // answer effects
         answerBtn.addEventListener('click', function(event) {
             if(event.target.textContent === questions[currentIndex].answer) {
-                console.log('correct');
                 score += 20
             } else {
-                console.log('incorrect');
                 timer -= 10
             }
             currentIndex++
