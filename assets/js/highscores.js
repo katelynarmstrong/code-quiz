@@ -7,6 +7,6 @@ placeForInitialsOnHighScorePage.value = initials
 var highscoreList = document.createElement ("li");
 highscoreList.append('highscores-list')
 
-localStorage.getItem(scoreList);
+localStorage.getItem('scoreList');
 
 
