@@ -42,6 +42,7 @@ var scoreDisplay = document.getElementById('score')
 var scores = document.getElementById('scores')
 
 
+
 startBtn.addEventListener('click', function() {
     document.getElementById('button-container').setAttribute('class', 'hidden')
     renderQuestions()
@@ -78,10 +79,16 @@ function endQuiz() {
     scores.setAttribute('class', 'scores')
     scores.append(submitBtn)
     
+    var scoreList = {
+        finalScore: score,
+        finalName: initials
+    };
+    
     // add event listener to button to add the users info to local storage and then window.location.href to your highscore page
    submitBtn.addEventListener('click', function() {
-    localStorage.setItem("initals", JSON.stringify(initials.value));
+    localStorage.setItem("scoreList", JSON.stringify(scoreList));
    })
+
 
 }
 
