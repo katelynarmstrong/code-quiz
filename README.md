@@ -4,10 +4,7 @@
 This is a responsive front end only application that utilizes html, css, and JavaScript to allow a student to test their knowledge of JavaScript. When clicking the start button a timer starts and a question appears with answer choices. When an answer is selected, another question is presented. When a question is answered incorrectly then time is subtracted from the clock. A score counter keeps up with the quiz taker's score with each correct answer.
 The quiz is over when all questions are answered or the timer reaches 0. Once the quiz is over, the user can document their score to continue to learn and understand JavaScript better.
 
-## GitHub Repo:
-https://github.com/katelynarmstrong/code-quiz
-
-## Deployed URL:
+## Deployed Application:
 https://katelynarmstrong.github.io/code-quiz/
 
 ## Screenshot:
